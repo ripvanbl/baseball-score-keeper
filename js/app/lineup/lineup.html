@@ -2,11 +2,17 @@
     Game - {{ vm.game.id }}
 </header>
 
-<tabset vertical="true" type="pills">
-    <tab heading="Away Team">
+<accordion close-others="vm.oneAtATime">
+    <accordion-group is-open="vm.awayTeamTab.open">
+        <accordion-heading>
+            Away Team <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': vm.awayTeamTab.open, 'glyphicon-chevron-up': !vm.awayTeamTab.open}"></i>
+        </accordion-heading>
         <bsk-team-lineup team-name="{{vm.game.awayTeam.name}}" players="vm.game.awayTeam.players"></bsk-team-lineup>
-    </tab>
-    <tab heading="Home Team">
+    </accordion-group>
+    <accordion-group is-open="vm.homeTeamTab.open">
+        <accordion-heading>
+            Home Team <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': vm.homeTeamTab.open, 'glyphicon-chevron-up': !vm.homeTeamTab.open}"></i>
+        </accordion-heading>
         <bsk-team-lineup team-name="{{vm.game.homeTeam.name}}" players="vm.game.homeTeam.players"></bsk-team-lineup>
-    </tab>
-</tabset>
+    </accordion-group>
+  </accordion>
