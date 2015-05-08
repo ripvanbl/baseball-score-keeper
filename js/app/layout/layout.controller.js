@@ -8,5 +8,6 @@
     function LayoutCtrl() {
         var vm = this;
         
+        vm.isCollapsed = true;
     }
 })();

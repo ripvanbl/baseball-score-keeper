@@ -2,10 +2,18 @@
     'use strict';
     
     angular.module('app.game')
-        .controller('ResetGameCtrl', ['$location', 'appRoutes', 'addData', ResetGameCtrl]);
+        .controller('ResetGameCtrl', ['$location', 'appRoutes', 'appData', ResetGameCtrl]);
     
     function ResetGameCtrl($location, appRoutes, appData) {
-        appData.game = null;
-        $location.path(appRoutes.HOME).replace();
+        activate();
+        
+        
+        /////////
+        
+        function activate() {
+            appData.reset();
+            
+            $location.path(appRoutes.HOME.url).replace();
+        }
     }
 })();

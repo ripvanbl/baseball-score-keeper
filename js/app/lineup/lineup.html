@@ -2,25 +2,11 @@
     Game - {{ vm.game.id }}
 </header>
 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">{{ vm.game.awayTeam.name }}</h3>
-    </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Number</th>
-                <th colspan="2">Name</th>
-            </tr>
-        </thead>
-        <tbody data-as-sortable="vm.dragControlListeners" ng-model="vm.game.awayTeam.players">
-            <tr ng-repeat="player in vm.game.awayTeam.players" data-as-sortable-item>
-                <td>{{ player.num }}</td>
-                <td>{{ player.name }}</td>
-                <td data-as-sortable-item-handle>
-                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<tabset vertical="true" type="pills">
+    <tab heading="Away Team">
+        <bsk-team-lineup team-name="{{vm.game.awayTeam.name}}" players="vm.game.awayTeam.players"></bsk-team-lineup>
+    </tab>
+    <tab heading="Home Team">
+        <bsk-team-lineup team-name="{{vm.game.homeTeam.name}}" players="vm.game.homeTeam.players"></bsk-team-lineup>
+    </tab>
+</tabset>

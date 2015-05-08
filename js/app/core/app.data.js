@@ -9,7 +9,8 @@
         return {
                 get game() { return getGame(); },
                 set game(val) { saveGame(val); },
-                getGenericPlayers: getGenericPlayers
+                getGenericPlayers: getGenericPlayers,
+                reset: reset
             };
         
         ////////////
@@ -34,6 +35,10 @@
                 { name: 'Player 8', num: 8 },
                 { name: 'Player 9', num: 9 }
             ];
+        }
+        
+        function reset() {
+            localStorageService.remove('game');
         }
     }
 })();

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="description" content="A fictitious baseball score keeping application / game.">
   <meta name="author" content="Brandon Lind">
   <link rel="shortcut icon" href="favicon.ico">
@@ -18,30 +18,36 @@
 
 <body>
   <div ng-include="'/js/app/layout/nav-bar.html'"></div>
-  <div class="container-fluid main-content">
+  <div class="container-fluid app-content">
     <div ng-view></div>
-  
+    
     <footer>
       <p>&copy; Brandon Lind 2015</p>
     </footer>
   </div>
-  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular-route.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
   <script src="js/lib/angular-local-storage.min.js"></script>
   <script src="js/lib/ng-sortable.min.js"></script>
+  
   <script src="js/app/core/core.module.js"></script>
   <script src="js/app/core/app.data.js"></script>
   <script src="js/app/core/app.routes.js"></script>
+  
   <script src="js/app/layout/layout.module.js"></script>
   <script src="js/app/layout/layout.controller.js"></script>
+  
   <script src="js/app/lineup/lineup.module.js"></script>
+  <script src="js/app/lineup/team-lineup.directive.js"></script>
   <script src="js/app/lineup/lineup.controller.js"></script>
+  
   <script src="js/app/game/game.module.js"></script>
   <script src="js/app/game/game.controller.js"></script>
   <script src="js/app/game/new-game.controller.js"></script>
   <script src="js/app/game/reset-game.controller.js"></script>
+  
   <script src="js/app/app.module.js"></script>
 </body>
 

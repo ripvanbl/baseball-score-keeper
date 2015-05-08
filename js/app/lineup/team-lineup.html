@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ vm.teamName }}</h3>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th colspan="2">Name</th>
+            </tr>
+        </thead>
+        <tbody data-as-sortable="vm.dragControlListeners" ng-model="vm.players">
+            <tr ng-repeat="player in vm.players" data-as-sortable-item>
+                <td>{{ player.num }}</td>
+                <td>{{ player.name }}</td>
+                <td data-as-sortable-item-handle>
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

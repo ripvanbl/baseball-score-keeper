@@ -47,8 +47,10 @@
             'RESET': {
                 url: '/reset',
                 config: {
-                    controller: 'ResetCtrl',
+                    controller: 'ResetGameCtrl',
                     controllerAs: 'vm',
+                    template: '<p>Resetting...</p>',
+                    title: 'BSK - Reset Game'
                 }
             }
         });

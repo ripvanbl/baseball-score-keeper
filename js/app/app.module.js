@@ -5,6 +5,9 @@
         .module('app', [
             // Angular stuff
             'ngRoute',
+            
+            // 3rd Party stuff
+            'ui.bootstrap',
 
             // My stuff
             'app.core',
@@ -20,7 +23,7 @@
 
     function runApp($rootScope) {
         $rootScope.$on('$routeChangeSuccess', function(event, currentRoute, previousRoute) {
-            document.title = currentRoute.title;
+            document.title = currentRoute.title || 'Baseball Score Keeper';
         });
     }
 
