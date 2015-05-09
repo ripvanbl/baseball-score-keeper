@@ -15,7 +15,7 @@
             },
 
             'GAME': {
-                url: '/game/:id?',
+                url: '/game',
                 config: {
                     templateUrl: '/js/app/game/game.html',
                     controller: 'GameCtrl',
@@ -25,7 +25,7 @@
             },
 
             'LINEUP': {
-                url: '/lineup/:id',
+                url: '/lineup',
                 config: {
                     templateUrl: '/js/app/lineup/lineup.html',
                     controller: 'LineupCtrl',
@@ -51,6 +51,16 @@
                     controllerAs: 'vm',
                     template: '<p>Resetting...</p>',
                     title: 'BSK - Reset Game'
+                }
+            },
+            
+            'TEAM': {
+                url: '/team/:id?',
+                config: {
+                    templateUrl: '/js/app/team/team.html',
+                    controller: 'TeamCtrl',
+                    controllerAs: 'vm',
+                    title: 'BSK - Team'
                 }
             }
         });

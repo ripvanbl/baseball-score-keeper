@@ -1,4 +1,4 @@
-<h1>New Game</h1>
+<header><h1>New Game</h1></header>
 <form name="newGame" novalidate ng-submit="vm.submit()">
     <div class="form-group" ng-class="{'has-error': newGame.awayTeam.$invalid && (newGame.awayTeam.$dirty || newGame.awayTeam.$touched)}">
         <label for="awayTeam">Away Team</label>
@@ -12,5 +12,5 @@
         <div class="help-block has-error" ng-show="newGame.homeTeam.$invalid && (newGame.homeTeam.$dirty || newGame.homeTeam.$touched)">The home team name is required.</div>
     </div>
     
-    <button type="submit" class="btn btn-default" ng-disabled="newGame.$invalid">Start Game</button>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="newGame.$invalid">Start Game</button>
 </form>

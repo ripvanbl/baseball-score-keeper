@@ -1,12 +1,12 @@
 (function() {
     'use strict';
-    
+
     angular
-        .module('app.lineup', [
+        .module('app.team', [
             // 3rd Party stuff
             'hmTouchEvents',
             'ui.sortable',
-            
+
             // My Stuff
             'app.core'
         ]);

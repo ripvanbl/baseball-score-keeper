@@ -13,7 +13,8 @@
             'app.core',
             'app.layout',
             'app.lineup',
-            'app.game'
+            'app.game',
+            'app.team'
         ])
         .config(['$routeProvider', 'appRoutes', setRoutes])
         .run(['$rootScope', runApp]);

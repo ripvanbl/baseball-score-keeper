@@ -8,6 +8,7 @@
     function bskTeamLineup () {
         var directive = {
             scope: {
+                'isEditable': '@editable',
                 'teamName': '@',
                 'players': '='
             },
@@ -24,6 +25,8 @@
         
         function controller() {
             var vm = this;
+            
+            vm.editPlayer = function(player) { window.alert(player.name);};
         }
     }
 })();
