@@ -9,17 +9,9 @@
         var vm = this;
         
         vm.id = '';
-        
-        vm.awayTeam = {
-            name: '',
-            players: angular.merge([], appData.getGenericPlayers())
-        };
-        
-        vm.homeTeam = {
-            name: '',
-            players: angular.merge([], appData.getGenericPlayers())
-        };
-        
+        vm.availableTeams = appData.getTeams();
+        vm.awayTeam = {};
+        vm.homeTeam = {};
         vm.submit = submit;
         
         function submit() {
