@@ -1,0 +1,13 @@
+<form name="teamForm" novalidate ng-submit="vm.submit()">
+    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="teamForm.$invalid">Save Team</button>
+    
+    <div class="form-group" ng-class="{'has-error': teamForm.name.$invalid && (teamForm.name.$dirty || teamForm.name.$touched)}">
+        <label for="name">Team Name</label>
+        <input required type="text" id="name" name="name" class="form-control" placeholder="Enter the team name..." ng-model="vm.team.name" />
+        <div class="help-block has-error" ng-show="teamForm.name.$invalid && (teamForm.name.$dirty || teamForm.name.$touched)">A team name is required.</div>
+    </div>
+    
+    <bsk-team-lineup team-name="{{vm.team.name}}" players="vm.team.players" editable="true"></bsk-team-lineup>
+    
+    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="teamForm.$invalid">Save Team</button>
+</form>

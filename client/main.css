@@ -1,0 +1,10 @@
+.app-content { margin-top: 65px; }
+footer { border-top: 1px solid gray; margin-top: 10px;}
+
+/* ng-sortable overrides */
+tr.as-sortable-item, tr.as-sortable-placeholder {
+    display: table-row;
+}
+
+/* angular-ui-bootstrap overrides */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

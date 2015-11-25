@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="A fictitious baseball score keeping application / game.">
+  <meta name="author" content="Brandon Lind">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/ng-sortable.min.css">
+  <link rel="stylesheet" href="main.css">
+
+  <title>Baseball Score Keeper</title>
+</head>
+
+<body>
+  <div ng-include="'./app/layout/nav-bar.html'"></div>
+  <div class="container-fluid app-content">
+    <div ng-view></div>
+    
+    <footer>
+      <p>&copy; Brandon Lind 2015</p>
+    </footer>
+  </div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="lib/angular-local-storage.min.js"></script>
+  
+  <script src="lib/hammer.min.js"></script>
+  <script src="lib/angular-hammer.min.js"></script>
+  <script src="lib/ng-sortable.min.js"></script>
+  
+  <script src="app/core/core.module.js"></script>
+  <script src="app/core/app.data.js"></script>
+  <script src="app/core/app.routes.js"></script>
+  
+  <script src="app/layout/layout.module.js"></script>
+  <script src="app/layout/layout.controller.js"></script>
+  
+  <script src="app/lineup/lineup.module.js"></script>
+  <script src="app/lineup/team-lineup.directive.js"></script>
+  <script src="app/lineup/lineup.controller.js"></script>
+  
+  <script src="app/team/team.module.js"></script>
+  <script src="app/team/team.controller.js"></script>
+  
+  <script src="app/game/game.module.js"></script>
+  <script src="app/game/game.controller.js"></script>
+  <script src="app/game/new-game.controller.js"></script>
+  <script src="app/game/reset-game.controller.js"></script>
+  
+  <script src="app/app.module.js"></script>
+</body>
+
+</html>

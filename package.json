@@ -1,0 +1,23 @@
+{
+  "name": "baseball-score-keeper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A ficticious baseball score keeping application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ripvanbl/baseball-score-keeper.git"
+  },
+  "author": "Brandon Lind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ripvanbl/baseball-score-keeper/issues"
+  },
+  "homepage": "https://github.com/ripvanbl/baseball-score-keeper",
+  "devDependencies": {
+    "express": "^4.13.3"
+  }
+}
