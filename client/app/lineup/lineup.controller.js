@@ -3,12 +3,12 @@
 
     angular
         .module('app.lineup')
-        .controller('LineupCtrl', ['$location', 'appRoutes', 'appData', LineupCtrl]);
+        .controller('LineupCtrl', ['$location', 'appRoutes', 'gameService', LineupCtrl]);
 
 
     /////////
 
-    function LineupCtrl($location, appRoutes, appData) {
+    function LineupCtrl($location, appRoutes, gameService) {
         var vm = this;
 
         vm.game;
@@ -23,7 +23,7 @@
         /////////
 
         function activate() {
-            vm.game = appData.game || {};
+            vm.game = gameService.game || {};
 
             if (!vm.game.id) {
                 $location.path(appRoutes.NEW_GAME.url).replace();

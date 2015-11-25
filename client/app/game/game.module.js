@@ -4,6 +4,7 @@
     angular
         .module('app.game', [
             // My Stuff
-            'app.core'
+            'app.core',
+            'app.team'
         ]);
 })();

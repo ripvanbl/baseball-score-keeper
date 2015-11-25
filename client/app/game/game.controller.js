@@ -3,9 +3,9 @@
     
     angular
         .module('app.game')
-        .controller('GameCtrl', ['$location', 'appRoutes', 'appData', GameCtrl]);
+        .controller('GameCtrl', ['$location', 'appRoutes', 'gameService', GameCtrl]);
         
-    function GameCtrl($location, appRoutes, appData) {
+    function GameCtrl($location, appRoutes, gameService) {
         var vm = this;
         vm.game = {};
         
@@ -15,7 +15,7 @@
         /////////
         
         function activate() {
-            vm.game = appData.game || {};
+            vm.game = gameService.game || {};
             
             if(!vm.game.id) {
                 $location.path(appRoutes.NEW_GAME.url).replace();

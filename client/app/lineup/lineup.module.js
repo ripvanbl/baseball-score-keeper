@@ -8,6 +8,7 @@
             'ui.sortable',
             
             // My Stuff
-            'app.core'
+            'app.core',
+            'app.game'
         ]);
 })();

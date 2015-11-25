@@ -3,20 +3,20 @@
     
     angular
         .module('app.game')
-        .controller('NewGameCtrl', ['$location', 'appRoutes', 'appData', NewGameCtrl]);
+        .controller('NewGameCtrl', ['$location', 'appRoutes', 'gameService', 'teamService', NewGameCtrl]);
     
-    function NewGameCtrl($location, appRoutes, appData) {
+    function NewGameCtrl($location, appRoutes, gameService, teamService) {
         var vm = this;
         
         vm.id = '';
-        vm.availableTeams = appData.getTeams();
+        vm.teams = teamService.getTeams();
         vm.awayTeam = {};
         vm.homeTeam = {};
         vm.submit = submit;
         
         function submit() {
             vm.id = new Date().toISOString();
-            appData.game = {id: vm.id, homeTeam: vm.homeTeam, awayTeam: vm.awayTeam };
+            gameService.game = {id: vm.id, homeTeam: vm.homeTeam, awayTeam: vm.awayTeam };
             $location.path(appRoutes.LINEUP.url).replace();
         }
     }
